@@ -67,18 +67,18 @@ This project achieves a seamless user experience through careful implementation 
 To get started with this project, follow these steps:
 
 1. Clone the repository:
-   bash
+2.  bash
    git clone https://github.com/yourusername/phone-book-web-app.git
    
 
-2. Import into Eclipse:
+3. Import into Eclipse:
    - Open Eclipse IDE and import the project as a Dynamic Web Project.
 
-3. Configure Database:
+4. Configure Database:
    - Set up a MySQL database on your local machine.
    - Configure the `DbConnect` class to connect to your database (update the database credentials accordingly).
 
-4. Run the project:
+5. Run the project:
    - Deploy the project on a servlet container like Apache Tomcat.
    - Access the app at `http://localhost:8080/your-project-name`.
 
@@ -102,8 +102,6 @@ To get started with this project, follow these steps:
 
 
  📂 Repository Structure
-
-
 /phone-book-web-app
 │
 ├── /WebContent
@@ -120,6 +118,9 @@ To get started with this project, follow these steps:
     ├── /navbar.jsp
     ├── /footer.jsp
     └── /allCss.jsp
+
+
+
 
 
 
