@@ -44,7 +44,7 @@ public class AddContactServlet extends HttpServlet {
 			
 		}
 		
-		System.out.println(name+" "+email+" "+phno+" "+about+" "+userid);
+//		System.out.println(name+" "+email+" "+phno+" "+about+" "+userid);
 	}
 
 }

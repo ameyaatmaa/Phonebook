@@ -127,7 +127,7 @@
 
     <% } %>
 
-    <!-- Footer -->
+   
     <footer>
         <%@ include file="component/footer.jsp"%>
     </footer>

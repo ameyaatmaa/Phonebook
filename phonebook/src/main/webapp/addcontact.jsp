@@ -6,7 +6,7 @@
     <title>Add Contact</title>
     <%@ include file="component/allCss.jsp"%>
     <style>
-        /* Global styles */
+        
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
@@ -18,7 +18,7 @@
             margin-top: 50px;
         }
 
-        /* Card styling */
+       
         .card {
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -37,20 +37,20 @@
             font-weight: bold;
         }
 
-        /* Success and error messages */
+
         .text-success {
             font-size: 1rem;
             margin-bottom: 15px;
-             margin-right: 15px;
+            margin-right: 15px;
         }
 
         .text-danger {
             font-size: 1rem;
             margin-bottom: 15px;
-             margin-right: 15px;
+            margin-right: 15px;
         }
 
-        /* Submit button */
+
         .btn-primary {
             background-color: #007bff;
             border: none;
@@ -63,7 +63,7 @@
             background-color: #0056b3;
         }
 
-        /* Footer margin adjustment */
+       
         footer {
             margin-top: 200px;
             padding: 10px 0;
@@ -77,9 +77,11 @@
     <%@include file="component/navbar.jsp"%>
 
     <% 
-    if (users == null) {
+    
+    if (session.getAttribute("users") == null) {
         session.setAttribute("outmsg", "Please Login to access this page");
         response.sendRedirect("login.jsp");
+        return; 
     }
     %>
 
@@ -107,7 +109,8 @@
                                 <% session.removeAttribute("failMsg"); %>
                             <% } %>
 
-                            <input name="userid" type="hidden" value="<%= users.getId() %>">
+                            
+                            <input name="userid" type="hidden" value="<%= ((com.entity.User) session.getAttribute("users")).getId() %>">
 
                             <div class="mb-3">
                                 <label for="nameInput" class="form-label">Name</label>

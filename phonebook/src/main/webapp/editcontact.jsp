@@ -65,14 +65,14 @@
     <%@ include file="component/navbar.jsp"%>
 
     <%
-        // Check if the user is logged in
+        
         if (users == null) {
             session.setAttribute("outmsg", "Please Login to access this page");
             response.sendRedirect("login.jsp");
             return;
         }
 
-        // Validate the `cid` parameter
+        
         String cidParam = request.getParameter("cid");
         if (cidParam == null || cidParam.isEmpty()) {
             session.setAttribute("failMsg", "Invalid contact ID.");
@@ -84,7 +84,7 @@
         ContactDAO dao = new ContactDAO(DbConnect.getConn());
         contact c = dao.getContactById(cid);
 
-        // Check if the contact exists
+       
         if (c == null) {
             session.setAttribute("failMsg", "Contact not found.");
             response.sendRedirect("viewcontact.jsp");
@@ -100,7 +100,7 @@
                         <form action="update" method="post">
                             <h4 class="text-center">Edit Contact</h4>
 
-                            <!-- Hidden input to pass cid -->
+                           
                             <input type="hidden" name="cid" value="<%= c.getId() %>" />
 
                             <% 

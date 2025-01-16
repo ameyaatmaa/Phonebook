@@ -70,7 +70,7 @@
                         <form action="login" method="post">
                             <h4 class="text-center mb-4">Login Page</h4>
 
-                            <!-- Success or Error Messages -->
+                           
                             <%
                                 String invalid = (String) session.getAttribute("invalid");
                                 if (invalid != null) {
@@ -91,19 +91,19 @@
                                 }
                             %>
 
-                            <!-- Email Input -->
+                        
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Email Address</label>
                                 <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
                             </div>
 
-                            <!-- Password Input -->
+                         
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
                                 <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
                             </div>
 
-                            <!-- Submit Button -->
+                          
                             <div class="text-center mt-4">
                                 <button type="submit" class="btn btn-primary w-100">Login</button>
                             </div>
@@ -114,7 +114,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    
     <div class="footer">
         <%@ include file="component/footer.jsp"%>
     </div>

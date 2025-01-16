@@ -29,7 +29,7 @@
         } else {
       %>
         <form class="d-flex">
-          <button class="btn btn-success mr=4"><%= users.getName() %></button>
+          <button class="btn btn-success mr=5 ml=4"><%= users.getName() %></button>
     		<a data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="btn btn-danger ml=4">Logout</a>
         </form>
       <% 
@@ -69,4 +69,4 @@
 </div>
 
 
-<!-- logout pop up -->
+
